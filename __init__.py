@@ -102,17 +102,3 @@ steel = {
 		'characteristicVelocity': 0.1,
 		'density': 8050
 		} 
-
-def pygranToLIGGGHTS(**material):
-	""" Transform a PyGran material database into a LIGGGHTS material dictionary """
-
-	for key in material:
-		if key is 'youngsModulus' or key is 'poissonsRatio' or key is 'yieldPress':
-			material[key] = (key, 'peratomtype', str(material[key]))
-		elif key is 'coefficientFriction' or key is 'coefficientRollingFriction' or key is 'cohesionEnergyDensity' \
-			or key is 'coefficientRestitution' or key is 'coefficientRollingViscousDamping':
-			material[key] = (key, 'peratomtypepair', str(material[key]))
-		elif key is 'characteristicVelocity':
-			material[key] = (key, 'scalar', str(material[key]))
-
-	return material
