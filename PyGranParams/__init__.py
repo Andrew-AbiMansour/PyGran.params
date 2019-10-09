@@ -98,7 +98,10 @@ steel = {
 		'poissonsRatio': 0.3,
 		'coefficientFriction': 0.5,
 		'coefficientRollingFriction': 0.0,
+		'cohesionEnergyDensity': 0.0,
 		'coefficientRestitution': 0.9,
+		'coefficientRollingViscousDamping': 0.1,
+                'yieldPress': 2e10,
 		'characteristicVelocity': 0.1,
 		'density': 8050
 		} 
