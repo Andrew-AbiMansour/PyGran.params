@@ -25,10 +25,7 @@
 '''
 
 from setuptools import setup, find_packages
-import subprocess
-import glob, shutil, re, os, sys
-from distutils.command.install import install
-from distutils.command.clean import clean
+import os
 
 # Extract metadata from simulation._version
 with open(os.path.join('PyGranParams', '_version.py'), 'r') as fp:
