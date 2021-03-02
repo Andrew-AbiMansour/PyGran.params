@@ -1,4 +1,4 @@
-'''
+"""
 A module that stores metadata for PyGranParams package
  
 Created on Oct 08, 2019
@@ -27,7 +27,7 @@ received a copy of the GNU General Public License along with PyGran.
 If not, see http://www.gnu.org/licenses . See also top-level README
 and LICENSE files.
 
-'''
-__version__ = '0.0.1'
-__author__ = 'Andrew Abi-Mansour'
-__email__ = 'support@pygran.org'
+"""
+__version__ = "0.0.1"
+__author__ = "Andrew Abi-Mansour"
+__email__ = "support@pygran.org"
