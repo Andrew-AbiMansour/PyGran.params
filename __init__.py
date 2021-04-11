@@ -26,4 +26,4 @@
   and LICENSE files.
 """
 
-from .PyGranParams import *
+from .pygran_params import *

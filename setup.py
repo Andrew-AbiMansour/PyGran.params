@@ -25,35 +25,25 @@
 """
 
 from setuptools import setup, find_packages
+import versioneer
 import os
 
-# Extract metadata from simulation._version
-with open(os.path.join("PyGranParams", "_version.py"), "r") as fp:
-    for line in fp.readlines():
-        if "__version__" in line:
-            __version__ = line.split("=")[-1].strip().strip("''")
-        elif "__email__" in line:
-            __email__ = line.split("=")[-1].strip().strip("''")
-        elif "__author__" in line:
-            __author__ = line.split("=")[-1].strip().strip("''")
-
 setup(
-    name="PyGranParams",
-    version=__version__,
-    author=__author__,
-    author_email=__email__,
-    description=("A PyGran submodule for materials definition"),
+    name="pygran_params",
+    version=versioneer.get_version(),
+    author="Andrew Abi-Mansour",
+    author_email="support@pygran.org",
+    description=("A PyGran package for powder/granular materials definition."),
     license="GNU v2",
     keywords="Discrete Element Method, Granular Materials",
     url="https://github.com/Andrew-AbiMansour/PyGranParams",
     packages=find_packages(),
     include_package_data=True,
-    long_description="A PyGran submodule that serves as an extensible materials database. See http://www.pygran.org for more info on PyGran.",
+    long_description="A PyGran package that serves as an extensible materials database. See http://www.pygran.org for more info on PyGran.",
     classifiers=[
         "Development Status :: 4 - Beta",
         "Topic :: Utilities",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
@@ -62,4 +52,5 @@ setup(
         "Operating System :: POSIX :: Linux",
     ],
     zip_safe=True,
+    cmdclass=versioneer.get_cmdclass(),
 )
