@@ -1,0 +1,2 @@
+include versioneer.py
+include pygran_params/_version.py
